@@ -1,15 +1,13 @@
 %define upstream_name    Catalyst-Model-KiokuDB
-%define upstream_version 0.12
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	7
+Version:	0.12
+Release:	8
 
 Summary:	Use KiokuDB in your Catalyst apps
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Catalyst-Model-KiokuDB
-Source0:	https://cpan.metacpan.org/authors/id/F/FL/FLORA/Catalyst-Model-KiokuDB-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/F/FL/FLORA/Catalyst-Model-KiokuDB-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -27,7 +25,7 @@ BuildArch:	noarch
 Perl extension to use KiokuDB in your Catalyst apps.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
